@@ -163,6 +163,7 @@ Copy the `DATABASE_URL` and set it in backend env vars.
 ### 3. User Authentication
 ![Signup Page](./screenshots/signup.png)
 *Secure JWT-based registration.*
+
 ---
 
 ## Features
