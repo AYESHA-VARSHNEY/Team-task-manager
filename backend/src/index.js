@@ -17,9 +17,9 @@ const allowedOrigins = [
 ].filter(Boolean);
 
 app.use(cors({
-  origin: '*', // Sab allow kar do temporarily
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  origin: process.env.FRONTEND_URL || '*', // Isse '*' karke dekho testing ke liye
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // PATCH yahan hona chahiye
+  credentials: true
 }));
 
 app.use(express.json());
