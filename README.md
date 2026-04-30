@@ -150,6 +150,21 @@ Copy the `DATABASE_URL` and set it in backend env vars.
 
 ---
 
+## 🖼️ Application Previews
+
+### 1. Dashboard Overview
+![Dashboard Status](./screenshots/dashboard.png)
+*Real-time statistics of projects and tasks.*
+
+### 2. Kanban Board (Project Management)
+![Kanban Board](./screenshots/kanban.png)
+*Manage tasks across To-Do, In-Progress, and Done columns.*
+
+### 3. User Authentication
+![Signup Page](./screenshots/signup.png)
+*Secure JWT-based registration.*
+---
+
 ## Features
 
 - **User Auth:** Signup, Login with JWT tokens
