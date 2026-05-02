@@ -1,9 +1,8 @@
 // src/controllers/auth.controller.js
 //
-// Developer Notes:
-// Handles all authentication logic — registration, login, and session validation.
-// We use bcryptjs (not bcrypt) intentionally: bcrypt requires native bindings which
-// fail silently on Railway's Nixpacks builder. bcryptjs is pure JS and portable.
+// Auth controller - handles signup, login and session
+// Note: using bcryptjs instead of bcrypt because bcrypt was breaking on Railway
+// (native binding issue) - bcryptjs is pure JS so no build problems
 //
 // JWT tokens are signed with a 7-day expiry. This was a deliberate tradeoff —
 // short-lived tokens require refresh token infrastructure which is out of scope here.

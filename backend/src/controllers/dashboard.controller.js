@@ -25,7 +25,7 @@ const getDashboard = async (req, res, next) => {
 
     console.log(`[Dashboard] Building stats for userId: ${currentUserId}`);
 
-    // Step 1: Find all projects the user is a member of (any role)
+    // get all projects this user is part of
     const userMemberships = await prisma.projectMember.findMany({
       where: { userId: currentUserId },
       select: { projectId: true },
@@ -34,7 +34,7 @@ const getDashboard = async (req, res, next) => {
 
     console.log(`[Dashboard] User is member of ${memberProjectIds.length} projects`);
 
-    // Step 2: Fetch all tasks across those projects in one query
+    // fetch all tasks from those projects in one go
     // We include assignee and project name for the "My Tasks" sidebar
     const allProjectTasks = await prisma.task.findMany({
       where: { projectId: { in: memberProjectIds } },

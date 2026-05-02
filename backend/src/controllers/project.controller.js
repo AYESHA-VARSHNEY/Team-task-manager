@@ -1,8 +1,7 @@
 // src/controllers/project.controller.js
 //
-// Developer Notes:
-// All project operations are scoped to the authenticated user via req.user.
-// Role enforcement (ADMIN vs MEMBER) lives in the middleware layer, not here —
+// Project routes - all operations check req.user (set by auth middleware)
+// Role checking (admin vs member) is handled in middleware, not here
 // this keeps controllers focused on business logic only.
 //
 // TODO: Add pagination to getMyProjects once teams scale beyond ~50 projects.
